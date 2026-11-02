@@ -1,0 +1,43 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #fffdfb; color: #64151c; font-family: Georgia, serif; text-align: center; }
+main { max-width: 720px; margin: auto; padding: 36px 20px 65px; }
+h1 { font-size: clamp(40px, 8vw, 68px); font-weight: normal; margin: 5px 0 18px; }
+h1 span { color: #ae161e; font-style: italic; }
+.handwriting { font-family: 'Brush Script MT', 'Segoe Script', cursive; color: #8f8584; font-size: 30px; font-style: italic; margin: 22px 0; }
+.hint { font-size: 14px; color: #9b6b6c; letter-spacing: 1px; }
+.date { color: #aaa; font-style: italic; margin-top: 45px; }
+.locket-link { display: block; max-width: 440px; margin: 20px auto; transition: transform .25s; }
+.locket-link:hover { transform: scale(1.03); }
+.locket-link img { display: block; width: 100%; height: auto; }
+.letter-layout { max-width: 680px; }
+.back { display: block; text-align: left; color: #8d3035; font-size: 14px; text-decoration: none; }
+.choices { display: flex; justify-content: center; gap: 9px; flex-wrap: wrap; margin: 30px 0 50px; }
+.choice { padding: 10px 15px; border: 1px solid #c9a7a5; background: #fff; color: #8d3035; cursor: pointer; border-radius: 20px; font-family: inherit; }
+.choice.active, .choice:hover { background: #991e25; color: white; }
+.envelope {display: block; position: relative; width: min(85vw, 440px); height: 290px; margin: 110px auto 55px; padding: 0; border: none; background: #a32126; cursor: pointer; overflow: visible; box-shadow: 0 15px 35px #4c17172b; transition: transform 0.3s ease; border-radius: 15px;}
+.envelope:hover { transform: translateY(-5px);}
+.envelope-flap { position: absolute; width: 100%; height: 170px; left: 0;top: -95px;background: #971e24; clip-path: polygon(50% 0%, 100% 100%,0% 100%); z-index: 1;}
+.paper-peek { position: absolute; width: 88%; height: 280px;left: 6%;top: -48px;background: #f4e5c9;box-shadow: 0 2px 10px #45171720;color: #9c2026;font: 13px monospace;letter-spacing: 2px;padding: 25px 15px;z-index: 2;}
+.paper-heading {display: block;font-size: 13px;}
+.paper-peek strong {display: block;font: 50px Georgia, serif;margin: 18px 0;letter-spacing: 0;}
+.paper-peek small {display: block;font-size: 10px;}
+.envelope-left {position: absolute;inset: 0;background: #b52a2e;clip-path: polygon(0 0,55% 55%,0 100%);z-index: 3;}
+.envelope-right {position: absolute;inset: 0;background: #aa242a;clip-path: polygon(100% 0,45% 55%,100% 100%);z-index: 3;}
+.envelope-front {position: absolute;inset: 0;background: #a32126;clip-path: polygon(0 100%,50% 48%,100% 100%);z-index: 4;}
+.heart-seal {position: absolute;top: 48%;left: 50%;transform: translate(-50%, -50%); width: 62px;height: 62px;display: flex;align-items: center;justify-content: center;background: #8f171e;color: #f8e2cb;border: 4px double #d78b75;border-radius: 45% 55% 48% 52%;box-shadow:0 3px 8px #4c171755,inset 0 0 0 3px #a82c30;font-size: 30px;z-index: 5;}
+.envelope-left,.envelope-right,.envelope-front {border-radius: 15px;}
+@media (max-width: 480px) {
+    .envelope {height: 230px;margin-top: 100px;}
+    .envelope-flap {height: 135px;top: -75px;}
+    .paper-peek {height: 220px;top: -38px;padding-top: 20px;}
+    .paper-peek strong {font-size: 40px;}
+    .heart-seal {width: 52px;height: 52px;font-size: 25px;}
+}
+.letter-content { position: relative; background: #fffaf2; border: 1px solid #e7d9c9; box-shadow: 0 8px 25px #4c171718; max-width: 500px; padding: 45px 38px; margin: 35px auto; }
+.letter-content[hidden] { display: none; }
+.letter-kicker { color: #b47576; font: 11px monospace; letter-spacing: 2px; }
+.letter-content h2 { font-size: 30px; font-weight: normal; }
+.letter-content p#letterText { line-height: 1.9; color: #654c4b; white-space: pre-line; }
+.signature { font-style: italic; margin-top: 35px; }
+.close { position: absolute; right: 15px; top: 10px; background: none; border: 0; font-size: 28px; color: #8d3035; cursor: pointer; }
+@media (max-width: 480px) { main { padding: 20px 16px 45px; } .envelope { height: 210px; } .paper-peek { height: 180px; } .letter-content { padding: 40px 23px; } }

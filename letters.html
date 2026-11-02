@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Letters for You ♡</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="letters-page">
+  <main class="letter-layout">
+    <a class="back" href="index.html">← Back to our locket</a>
+    <p class="handwriting">Sealed with love</p>
+    <h1>Letters for <span>You</span></h1>
+    <p class="hint">Pick a letter, then tap the envelope to read it.</p>
+    <div class="choices">
+      <button class="choice active" data-letter="letter">Love letter</button>
+      <button class="choice" data-letter="memory">Our memories</button>
+      <button class="choice" data-letter="promise">My promise</button>
+    </div>
+    <button class="envelope" id="envelope" type="button">
+
+  <span class="envelope-flap"></span>
+
+  <span class="paper-peek">
+    <span class="paper-heading">DEAR YOU,</span>
+    <strong>♡</strong>
+    <small>A LITTLE LETTER FOR YOU</small>
+  </span>
+
+  <span class="envelope-left"></span>
+  <span class="envelope-right"></span>
+  <span class="envelope-front"></span>
+
+  <span class="heart-seal">♡</span>
+
+</button>
+    <article class="letter-content" id="letterContent" hidden>
+      <button class="close" id="closeLetter" aria-label="Close letter">×</button>
+      <p class="letter-kicker">A LITTLE NOTE, JUST FOR YOU</p>
+      <h2 id="letterTitle"></h2>
+      <p id="letterText"></p>
+      <p class="signature">Always, with love ♡</p>
+    </article>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
